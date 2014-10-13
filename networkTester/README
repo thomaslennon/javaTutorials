@@ -1,0 +1,7 @@
+Simple application to test network connections between two hosts.
+
+Tests are:
+1. Open a connection to the another host
+2. Open and hold a connection to the other host
+3. Small file transfers. Send a burst of small data packets and handshake their checksums.
+3. Large binary transfer. Calculate speed and calculate their checksums.

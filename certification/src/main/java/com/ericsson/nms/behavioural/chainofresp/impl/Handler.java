@@ -10,16 +10,20 @@ public abstract class Handler {
         this.nextHandler = nextHandler;
     }
 
+    public void setNextHandler(final Handler nextHandler){
+        this.nextHandler = nextHandler;
+    }
+
     /**
      * Chance to handle the object. The handler should then pass the object to the nextHandler, if one exists.
      * @param someObject the object to be processed
      */
-    public void handleRequest(Object someObject){
+    public void handleRequest(final Object someObject){
         passToNext(someObject);
     }
 
-    protected void passToNext(Object someObject){
-        //handle the object
+    protected void passToNext(final Object someObject){
+        //if there is no other handler, stop and return.
         if(nextHandler==null){
             return;
         }

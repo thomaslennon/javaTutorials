@@ -29,7 +29,7 @@ public class HandlerTest {
             }
         };
 
-        new TempHandler(myHandler1).handleRequest(null);
+        new TempHandler(myHandler1).handleRequest(myHandler1);
         assertTrue(wasCalled);
     }
 
@@ -45,8 +45,5 @@ class TempHandler extends Handler {
         super(handler);
     }
 
-    @Override
-    public void handleRequest(Object someObject) {
-        super.handleRequest(someObject);
-    }
+
 }

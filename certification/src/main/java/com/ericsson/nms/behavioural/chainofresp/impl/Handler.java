@@ -1,7 +1,7 @@
 package com.ericsson.nms.behavioural.chainofresp.impl;
 
 public abstract class Handler {
-    private Handler nextHandler = null;
+    protected Handler nextHandler = null;
 
     public Handler(){
     }
@@ -10,10 +10,19 @@ public abstract class Handler {
         this.nextHandler = nextHandler;
     }
 
-    public void handleRequest(){
+    /**
+     * Chance to handle the object. The handler should then pass the object to the nextHandler, if one exists.
+     * @param someObject the object to be processed
+     */
+    public void handleRequest(Object someObject){
+        passToNext(someObject);
+    }
+
+    protected void passToNext(Object someObject){
+        //handle the object
         if(nextHandler==null){
             return;
         }
-        nextHandler.handleRequest();
+        nextHandler.handleRequest(someObject);
     }
 }

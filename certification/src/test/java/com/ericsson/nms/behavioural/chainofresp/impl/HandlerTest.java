@@ -21,27 +21,32 @@ public class HandlerTest {
     }
 
     @Test
-    public void handlingActionIsPassedOn(){
-        Handler myHandler1 = new Handler(){
+    public void handlingActionIsPassedOn() {
+        Handler myHandler1 = new Handler() {
             @Override
-            public void handleRequest(){
+            public void handleRequest(Object someObject) {
                 wasCalled = true;
             }
         };
 
-        new TempHandler(myHandler1).handleRequest();
+        new TempHandler(myHandler1).handleRequest(null);
         assertTrue(wasCalled);
+    }
+
+    @Test
+    public void handlingActionIsNotPassedOn() {
+        new TempHandler(null).handleRequest(null);
     }
 
 }
 
-class TempHandler extends Handler{
-    public TempHandler(Handler handler){
+class TempHandler extends Handler {
+    public TempHandler(Handler handler) {
         super(handler);
     }
 
     @Override
-    public void handleRequest(){
-        super.handleRequest();
+    public void handleRequest(Object someObject) {
+        super.handleRequest(someObject);
     }
 }

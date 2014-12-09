@@ -27,7 +27,7 @@ public class BashScriptParserTest {
         parser.readScript("C:\\repos\\github\\javaTutorials\\scriptParser\\target\\test-classes\\enm.sh");
         Collection<String> functions = parser.getFunctions();
         assertEquals(functions.size(), functionsNames.length);
-        Collection<String> includes = parser.getImportedFiles();
+        Collection<String> includes = parser.getIncludedFiles();
         assertEquals(includes.size(), libraries.length);
     }
 

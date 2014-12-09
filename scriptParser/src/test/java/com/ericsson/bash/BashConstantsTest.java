@@ -67,10 +67,10 @@ public class BashConstantsTest {
         assertEquals(globalVariable, "ENMINST_HOME" );
     }
 
-    @Test
-    public void isLineAGlobalVariable_passGlobalVariableLineOfCode_success(){
-        assertTrue(BashConstants.isLineAGlobalVariable(sampleGlobalVariable));
-    }
+//    @Test
+//    public void isLineAGlobalVariable_passGlobalVariableLineOfCode_success(){
+//        assertTrue(BashConstants.isLineAGlobalVariable(sampleGlobalVariable));
+//    }
     @Test
     public void isLineAGlobalVariable_passOtherlines_fail(){
         assertFalse(BashConstants.isLineAGlobalVariable(sampleIncludesLine));

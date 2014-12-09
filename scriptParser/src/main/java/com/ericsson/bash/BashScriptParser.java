@@ -41,7 +41,7 @@ public class BashScriptParser {
         return Collections.unmodifiableCollection(functions);
     }
 
-    public Collection<String> getImportedFiles(){
+    public Collection<String> getIncludedFiles(){
         return Collections.unmodifiableCollection(importedFiles);
     }
 

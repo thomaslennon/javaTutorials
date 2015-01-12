@@ -1,5 +1,6 @@
 package com.ericsson.bash;
 
+import com.ericsson.bash.scriptAnalyser.BashScriptParser;
 import org.junit.Before;
 
 import java.util.Collection;

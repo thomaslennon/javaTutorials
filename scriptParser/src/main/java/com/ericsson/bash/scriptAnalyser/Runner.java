@@ -1,13 +1,13 @@
-package com.ericsson.bash;
+package com.ericsson.bash.scriptAnalyser;
 
 
 import java.util.Collection;
 
 
 /**
- *
+ * arg is a list of files
  */
-public class Runner {
+public final class Runner {
 
     public static void main(String parameters[]){
         for(String parameter : parameters){

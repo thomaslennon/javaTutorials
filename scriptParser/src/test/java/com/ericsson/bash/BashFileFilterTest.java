@@ -1,5 +1,6 @@
 package com.ericsson.bash;
 
+import com.ericsson.bash.scriptAnalyser.BashFileFilter;
 import org.junit.Test;
 
 import java.io.File;

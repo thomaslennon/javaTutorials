@@ -1,9 +1,9 @@
-package com.ericsson.bash;
+package com.ericsson.bash.scriptAnalyser;
 
 import java.io.File;
 import java.io.FileFilter;
 
-public class BashFileFilter implements FileFilter {
+public final class BashFileFilter implements FileFilter {
     String bashScript = ".sh";
     String bashLibrary = ".lib";
 

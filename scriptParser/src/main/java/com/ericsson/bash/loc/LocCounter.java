@@ -1,10 +1,12 @@
 package com.ericsson.bash.loc;
 
+import  com.ericsson.srcfiles.file.TextFileLineReader;
 
 public final class LocCounter {
 
     public static int countLocInFile(String fileName){
-        return 0;
+        TextFileLineReader reader = new TextFileLineReader(fileName);
+        return reader.countLines();
     }
 
     public static void main(String filenames[]){
@@ -18,3 +20,4 @@ public final class LocCounter {
     }
 
 }
+

@@ -9,27 +9,27 @@ public class NumberCheckerTests {
     NumberChecker checker = new NumberChecker();
 
     @Test
-    public void ensureNumberIsIn5To9Range_Checking_below_lower_boundary_ReturnFalse(){
+    public void ensureNumberIsIn5To9Range_Checking_below_5_ReturnFalse(){
         assertFalse(checker.ensureNumberIsIn5To9Range(2));
     }
 
     @Test
-    public void ensureNumberIsIn5To9Range_Checking_lower_boundary_ReturnTrue(){
+    public void ensureNumberIsIn5To9Range_Checking_5_ReturnTrue(){
         assertTrue(checker.ensureNumberIsIn5To9Range(5));
     }
 
     @Test
-    public void ensureNumberIsIn5To9Range_Checking_between_bounds_returnTrue(){
+    public void ensureNumberIsIn5To9Range_Checking_between_5_and_9_returnTrue(){
         assertTrue(checker.ensureNumberIsIn5To9Range(7));
     }
 
     @Test
-    public void ensureNumberIsIn5To9Range_Checking_upperboundary_returnTrue(){
+    public void ensureNumberIsIn5To9Range_Checking_checking_9_returnTrue(){
         assertTrue(checker.ensureNumberIsIn5To9Range(9));
     }
 
     @Test
-    public void ensureNumberIsIn5To9Range_Checking_above_upper_boundary_returnFalse(){
+    public void ensureNumberIsIn5To9Range_Checking_above_9_returnFalse(){
         assertFalse(checker.ensureNumberIsIn5To9Range(15));
     }
 }
